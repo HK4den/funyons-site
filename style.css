@@ -1,0 +1,137 @@
+/*Kaden Huckeba*/
+/* Made these two story IDs so they can be references for the nav */
+#story1 {
+    color: #0a0700;
+}
+
+
+#story2 {
+    color: #0a0700;
+}
+
+/* Makes everything have this uniform border box */
+* {
+    box-sizing: border-box;
+}
+
+/* Changes background color to something light for anything that doesn't already have a background */
+body {
+    background-color: #f0eee9;
+}
+
+/* Gives a bit of space around everything */
+body {
+    margin: 1px;
+}
+
+/* Makes the headers for the articals underlines so it looks more clear */
+h2 {
+    text-decoration: underline;
+}
+
+/* Makes author names italic */
+h3 {
+    font-style: italic;
+}
+
+/* Makes the nav stick to the top when scrolling so you can easily go between stuff. Also gives a border and background color and makes text bold */
+nav {
+    position: sticky;
+    top: 0;
+    border: 1pt solid orange;
+    background-color: #f2eee4;
+    font-weight: bold;
+}
+
+/* Makes the nav links different colors */
+nav a,
+nav a:visited {
+    color: #a15402
+}
+
+/* Makes nav links different colors highlighted */
+nav a:hover {
+    color: #2b1803;
+}
+
+/* Makes all of these have extra padding and makes the text centered for more neat-ness */
+header,
+nav,
+main,
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Makes header a different color background wise */
+header {
+    background-color: #e8dec3;
+    border: 1pt solid orange;
+    border-bottom: 0;
+}
+
+section {
+    border: 1pt solid black;
+    background-color: #f2eee4;
+}
+
+/* Alright now here's the media stuff that changes depending on screen minimum width and what not */
+/* also the rubric and the assignment said different things for the media queries? ruberick says 500px, 768px, 1024px so i put that, but on the assignment it said 576, 720, 992. Not the same. Hope both are counted correct for people but personally just in case I'm following the rubric directly here.*/
+
+/* sideways phones maybe/small tablets and bigger */
+@media (min-width: 500px) {
+
+    /* more padding so stuff isnt squished too bad maybe */
+    body {
+        padding: 10px;
+    }
+
+    /* Makes images smaller and centered so theyre fitting in the screen and not streching */
+    img {
+        width: 75%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* stuff like more normal sized ipads and small laptops? */
+@media (min-width: 768px) {
+
+    /* shows stories side by side */
+    section {
+        display: inline-block;
+        width: 45%;
+        vertical-align: top;
+        padding: 20px;
+    }
+
+    /* Makes the paragraph text a bit bigger due to the bigger screen */
+    p {
+        font-size: 18px;
+    }
+}
+
+/* More normal sized monitors I think, 1080p and above, so the average monitor. */
+@media (min-width: 1024px) {
+
+    /* makes nav stand out a bit more */
+    nav {
+        border: 2pt solid orange;
+        letter-spacing: 2px;
+        /*I like how it looks, its fancy looking*/
+    }
+
+    /* makes header border stand out a bit more */
+    header {
+        border: 2pt solid orange;
+        border-bottom: 0pt;
+    }
+
+    /* makes section border stand out a bit more */
+    section {
+        border: 2pt solid black;
+    }
+
+    /*the border increases are needed I think because they started feeling a bit small when full screen*/
+
+}
